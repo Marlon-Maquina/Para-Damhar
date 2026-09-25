@@ -1,0 +1,1246 @@
+/* ==================================================
+   CONFIGURACIÓN GENERAL
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   PANTALLA PRINCIPAL
+================================================== */
+
+.pantalla {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #fff9c9 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #ffe98a 0%,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fffdf0,
+            #fff4b8
+        );
+
+    padding: 20px;
+}
+
+
+/* ==================================================
+   TARJETAS
+================================================== */
+
+.tarjeta {
+
+    width: min(90%, 550px);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    padding: 45px 40px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px
+        rgba(180, 145, 20, 0.18);
+
+    border:
+        1px solid
+        rgba(255, 210, 70, 0.35);
+
+    backdrop-filter: blur(10px);
+
+    animation:
+        aparecer 0.8s ease;
+}
+
+
+/* ==================================================
+   PANTALLAS OCULTAS
+================================================== */
+
+.acertijo,
+.pantalla-pregunta,
+.revelacion,
+.carta-contenedor {
+    display: none;
+}
+
+
+/* ==================================================
+   TEXTOS
+================================================== */
+
+.emoji {
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+
+    animation:
+        latido 2s infinite;
+}
+
+
+.pequeno {
+
+    color: #9a8121;
+
+    font-size: 16px;
+
+    margin-bottom: 12px;
+}
+
+
+h1 {
+
+    color: #5d4c08;
+
+    font-size:
+        clamp(28px, 5vw, 40px);
+
+    margin-bottom: 25px;
+}
+
+
+.pregunta {
+
+    color: #5f5a43;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+.pregunta strong {
+
+    color: #c59b00;
+}
+
+
+/* ==================================================
+   PISTA
+================================================== */
+
+.pista {
+
+    font-family: Arial, sans-serif;
+
+    color: #8c7413;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.pista strong {
+
+    color: #c59b00;
+}
+
+
+/* ==================================================
+   BOTONES
+================================================== */
+
+.botones {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.btn {
+
+    border: none;
+
+    padding:
+        14px 25px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.btn:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* ==================================================
+   BOTÓN AMARILLO
+================================================== */
+
+.btn-si {
+
+    background: #f4c928;
+
+    color: #4c3c00;
+
+    box-shadow:
+        0 8px 20px
+        rgba(220, 174, 0, 0.25);
+}
+
+
+.btn-si:hover {
+
+    box-shadow:
+        0 12px 25px
+        rgba(220, 174, 0, 0.35);
+}
+
+
+/* ==================================================
+   BOTÓN NO
+================================================== */
+
+.btn-no {
+
+    background: #f2f2f2;
+
+    color: #555;
+}
+
+
+/* ==================================================
+   ENTRADA DEL ACERTIJO
+================================================== */
+
+.entrada {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.entrada input {
+
+    width: 150px;
+
+    padding:
+        14px 15px;
+
+    border:
+        2px solid
+        #ead477;
+
+    border-radius: 15px;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 24px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    letter-spacing: 8px;
+
+    color: #5d4c08;
+
+    background: #fffdf4;
+
+    text-transform: uppercase;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.entrada input:focus {
+
+    border-color: #d8b321;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(244, 201, 40, 0.15);
+}
+
+
+/* ==================================================
+   OPCIONES
+================================================== */
+
+.opciones {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+
+.opcion {
+
+    width: 100%;
+
+    padding:
+        15px 18px;
+
+    border-radius: 15px;
+
+    border:
+        2px solid
+        #eee0a1;
+
+    background:
+        #fffdf4;
+
+    color: #5f5a43;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.opcion:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        #fff8d9;
+
+    border-color:
+        #e4c64d;
+
+    box-shadow:
+        0 5px 15px
+        rgba(200, 165, 30, 0.15);
+}
+
+
+.opcion-especial {
+
+    border-color:
+        #d8b321;
+
+    background:
+        #fff8d9;
+
+    color:
+        #806a0d;
+
+    margin-top: 5px;
+}
+
+
+/* ==================================================
+   MENSAJES
+================================================== */
+
+.mensaje {
+
+    margin-top: 20px;
+
+    min-height: 24px;
+
+    font-family:
+        Arial, sans-serif;
+
+    color:
+        #9b7d00;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   REVELACIONES
+================================================== */
+
+.texto-revelacion {
+
+    font-family:
+        Arial, sans-serif;
+
+    color:
+        #6e6544;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.texto-revelacion p {
+
+    margin-bottom: 15px;
+}
+
+
+.frase-destacada {
+
+    color:
+        #8b7000;
+
+    font-size: 18px;
+
+    margin-top:
+        25px !important;
+}
+
+
+.frase-destacada strong {
+
+    color:
+        #c59b00;
+
+    font-size: 22px;
+}
+
+
+/* ==================================================
+   FLORES Y CORAZONES DE FONDO
+================================================== */
+
+.corazon {
+
+    position: absolute;
+
+    color:
+        rgba(212, 172, 28, 0.35);
+
+    font-size: 40px;
+
+    animation:
+        flotar 5s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+.corazon-1 {
+
+    top: 12%;
+    left: 10%;
+}
+
+
+.corazon-2 {
+
+    top: 20%;
+    right: 12%;
+
+    font-size: 28px;
+
+    animation-delay: 1s;
+}
+
+
+.corazon-3 {
+
+    bottom: 15%;
+    left: 15%;
+
+    font-size: 25px;
+
+    animation-delay: 2s;
+}
+
+
+.corazon-4 {
+
+    bottom: 10%;
+    right: 10%;
+
+    font-size: 45px;
+
+    animation-delay: 3s;
+}
+
+
+.flor {
+
+    position: absolute;
+
+    font-size: 35px;
+
+    opacity: 0.7;
+
+    animation:
+        florFlotar 6s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+.flor-1 {
+
+    top: 10%;
+    left: 7%;
+}
+
+
+.flor-2 {
+
+    top: 15%;
+    right: 8%;
+
+    font-size: 28px;
+
+    animation-delay: 1s;
+}
+
+
+.flor-3 {
+
+    bottom: 12%;
+    left: 8%;
+
+    font-size: 30px;
+
+    animation-delay: 2s;
+}
+
+
+.flor-4 {
+
+    bottom: 15%;
+    right: 7%;
+
+    font-size: 40px;
+
+    animation-delay: 3s;
+}
+
+
+.flor-5 {
+
+    top: 45%;
+    left: 3%;
+
+    font-size: 22px;
+
+    animation-delay: 4s;
+}
+
+
+/* ==================================================
+   CARTA
+================================================== */
+
+.carta-contenedor {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100vh;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    animation:
+        aparecerCarta 1.2s ease;
+}
+
+
+/* ==================================================
+   PAPEL
+================================================== */
+
+.papel {
+
+    position: relative;
+
+    width:
+        min(90%, 720px);
+
+    max-height: 88vh;
+
+    overflow-y: auto;
+
+    padding:
+        55px 65px;
+
+    background:
+        #fffdf3;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(130, 100, 20, 0.22),
+
+        0 5px 15px
+        rgba(130, 100, 20, 0.12);
+
+    border:
+        1px solid
+        rgba(210, 180, 90, 0.4);
+
+    transform:
+        rotate(-0.5deg);
+}
+
+
+/* Textura del papel */
+
+.papel::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.25;
+
+    background-image:
+        radial-gradient(
+            rgba(150, 120, 40, 0.12) 1px,
+            transparent 1px
+        );
+
+    background-size: 8px 8px;
+}
+
+
+/* ==================================================
+   DECORACIÓN DE LA CARTA
+================================================== */
+
+.decoracion-papel {
+
+    position: relative;
+
+    z-index: 2;
+
+    color:
+        #d5ad22;
+
+    font-size: 25px;
+
+    text-align: center;
+
+    margin-bottom: 12px;
+}
+
+
+/* ==================================================
+   ENCABEZADO DE CARTA
+================================================== */
+
+.carta-saludo {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color:
+        #a08732;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+
+.titulo-carta {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color:
+        #62500d;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(28px, 5vw, 40px);
+
+    margin-bottom: 15px;
+}
+
+
+.linea-carta {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 80px;
+
+    height: 2px;
+
+    margin:
+        0 auto 30px;
+
+    background:
+        #d6b52e;
+}
+
+
+/* ==================================================
+   TEXTO DE LA CARTA
+================================================== */
+
+.texto-carta {
+
+    position: relative;
+
+    z-index: 2;
+
+    color:
+        #5f5945;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    text-align: left;
+}
+
+
+.texto-carta p {
+
+    margin-bottom: 20px;
+}
+
+
+.texto-carta strong {
+
+    color:
+        #b28b00;
+}
+
+
+/* ==================================================
+   FRASES ESPECIALES
+================================================== */
+
+.frase-carta {
+
+    text-align: center;
+
+    font-style: italic;
+
+    color:
+        #75652a;
+
+    padding:
+        0 20px;
+}
+
+
+.frase-final-carta {
+
+    text-align: center;
+
+    font-size: 21px;
+
+    color:
+        #a17e00;
+
+    font-weight: bold;
+
+    margin-top: 30px;
+}
+
+
+/* ==================================================
+   FIRMA
+================================================== */
+
+.firma-carta {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 35px;
+
+    text-align: right;
+
+    color:
+        #76642b;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size: 21px;
+}
+
+
+.firma-carta strong {
+
+    display: block;
+
+    color:
+        #66530b;
+
+    font-size: 30px;
+
+    margin-top: 3px;
+}
+
+
+.corazon-firma {
+
+    margin-top: 5px;
+
+    font-size: 22px;
+}
+
+
+/* ==================================================
+   FLORES DE LA CARTA
+================================================== */
+
+.flores-carta {
+
+    position: absolute;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(
+            0 5px 8px
+            rgba(150, 120, 20, 0.18)
+        );
+
+    animation:
+        floresCarta 5s ease-in-out infinite;
+}
+
+
+.flor-carta-1 {
+
+    top: 8%;
+    left: 7%;
+
+    font-size: 55px;
+}
+
+
+.flor-carta-2 {
+
+    top: 13%;
+    right: 8%;
+
+    font-size: 42px;
+
+    animation-delay: 1s;
+}
+
+
+.flor-carta-3 {
+
+    bottom: 8%;
+    left: 9%;
+
+    font-size: 48px;
+
+    animation-delay: 2s;
+}
+
+
+.flor-carta-4 {
+
+    bottom: 12%;
+    right: 7%;
+
+    font-size: 58px;
+
+    animation-delay: 3s;
+}
+
+
+.flor-carta-5 {
+
+    top: 43%;
+    left: 3%;
+
+    font-size: 32px;
+
+    animation-delay: 1.5s;
+}
+
+
+.flor-carta-6 {
+
+    top: 48%;
+    right: 3%;
+
+    font-size: 30px;
+
+    animation-delay: 2.5s;
+}
+
+
+/* ==================================================
+   ANIMACIONES
+================================================== */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.98);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes latido {
+
+    0%, 100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.12);
+    }
+}
+
+
+@keyframes flotar {
+
+    0%, 100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px);
+    }
+}
+
+
+@keyframes florFlotar {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px)
+            rotate(5deg);
+    }
+}
+
+
+@keyframes aparecerCarta {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.94)
+            translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+@keyframes floresCarta {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(-4deg);
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px)
+            rotate(4deg);
+    }
+}
+
+
+/* ==================================================
+   CELULARES
+================================================== */
+
+@media (max-width: 600px) {
+
+    .tarjeta {
+
+        width: 92%;
+
+        padding:
+            35px 22px;
+
+        max-height: 88vh;
+    }
+
+
+    h1 {
+
+        font-size: 29px;
+    }
+
+
+    .pregunta {
+
+        font-size: 16px;
+    }
+
+
+    .btn {
+
+        width: 100%;
+
+        max-width: 280px;
+    }
+
+
+    .entrada {
+
+        flex-direction: column;
+    }
+
+
+    .entrada input {
+
+        width: 180px;
+    }
+
+
+    .opcion {
+
+        font-size: 15px;
+
+        padding:
+            14px 12px;
+    }
+
+
+    .corazon {
+
+        font-size: 30px;
+    }
+
+
+    .flor {
+
+        font-size: 27px;
+    }
+
+
+    /* Carta */
+
+    .carta-contenedor {
+
+        padding: 15px;
+    }
+
+
+    .papel {
+
+        width: 94%;
+
+        max-height: 92vh;
+
+        padding:
+            40px 25px;
+    }
+
+
+    .texto-carta {
+
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    .carta-saludo {
+
+        font-size: 21px;
+    }
+
+
+    .titulo-carta {
+
+        font-size: 29px;
+    }
+
+
+    .frase-final-carta {
+
+        font-size: 19px;
+    }
+
+
+    .flor-carta-1 {
+
+        font-size: 35px;
+
+        left: 2%;
+    }
+
+
+    .flor-carta-2 {
+
+        font-size: 30px;
+
+        right: 2%;
+    }
+
+
+    .flor-carta-3 {
+
+        font-size: 32px;
+
+        left: 2%;
+    }
+
+
+    .flor-carta-4 {
+
+        font-size: 38px;
+
+        right: 2%;
+    }
+
+
+    .flor-carta-5,
+    .flor-carta-6 {
+
+        display: none;
+    }
+
+}
