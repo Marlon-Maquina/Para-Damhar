@@ -5,53 +5,89 @@
 const btnSi =
     document.getElementById("btnSi");
 
+
 const btnNo =
     document.getElementById("btnNo");
+
 
 const tarjeta =
     document.getElementById("tarjeta");
 
+
 const acertijo =
     document.getElementById("acertijo");
+
 
 const mensaje =
     document.getElementById("mensaje");
 
+
 const respuesta =
     document.getElementById("respuesta");
+
 
 const btnDescubrir =
     document.getElementById("btnDescubrir");
 
+
 const mensajeAcertijo =
     document.getElementById("mensajeAcertijo");
+
 
 const pregunta1 =
     document.getElementById("pregunta1");
 
+
 const revelacion1 =
     document.getElementById("revelacion1");
+
 
 const mensajePregunta1 =
     document.getElementById("mensajePregunta1");
 
+
 const btnPregunta2 =
     document.getElementById("btnPregunta2");
+
 
 const pregunta2 =
     document.getElementById("pregunta2");
 
+
 const revelacion2 =
     document.getElementById("revelacion2");
+
 
 const mensajePregunta2 =
     document.getElementById("mensajePregunta2");
 
+
 const btnCarta =
     document.getElementById("btnCarta");
 
+
 const carta =
     document.getElementById("carta");
+
+
+const sobre =
+    document.querySelector(".sobre");
+
+
+const sobreContenedor =
+    document.getElementById("sobreContenedor");
+
+
+const btnAbrirCarta =
+    document.getElementById("btnAbrirCarta");
+
+
+const papelCarta =
+    document.getElementById("papelCarta");
+
+
+const textoAbrir =
+    document.querySelector(".texto-abrir");
 
 
 // ==================================================
@@ -61,24 +97,47 @@ const carta =
 function mostrarPantalla(pantallaMostrar) {
 
     const pantallas = [
+
         tarjeta,
+
         acertijo,
+
         pregunta1,
+
         revelacion1,
+
         pregunta2,
+
         revelacion2,
+
         carta
+
     ];
 
 
     pantallas.forEach(function (pantalla) {
 
-        pantalla.style.display = "none";
+        pantalla.style.display =
+            "none";
 
     });
 
 
-    pantallaMostrar.style.display = "block";
+    // ----------------------------------------------
+    // LA CARTA NECESITA FLEX PARA CENTRAR EL SOBRE
+    // ----------------------------------------------
+
+    if (pantallaMostrar === carta) {
+
+        pantallaMostrar.style.display =
+            "flex";
+
+    } else {
+
+        pantallaMostrar.style.display =
+            "block";
+
+    }
 
 }
 
@@ -87,41 +146,51 @@ function mostrarPantalla(pantallaMostrar) {
 // PANTALLA 1
 // ==================================================
 
-btnSi.addEventListener("click", function () {
+btnSi.addEventListener(
+    "click",
+    function () {
 
-    mostrarPantalla(acertijo);
+        mostrarPantalla(acertijo);
 
-    respuesta.focus();
+        setTimeout(function () {
 
-});
+            respuesta.focus();
 
+        }, 100);
 
-btnNo.addEventListener("click", function () {
-
-    mensaje.textContent =
-        "Mmm... creo que debes pensarlo mejor 👀";
-
-
-    btnNo.style.transform =
-        "translateX(8px)";
+    }
+);
 
 
-    setTimeout(function () {
+btnNo.addEventListener(
+    "click",
+    function () {
+
+        mensaje.textContent =
+            "Mmm... creo que debes pensarlo mejor 👀";
+
 
         btnNo.style.transform =
-            "translateX(-8px)";
-
-    }, 100);
+            "translateX(8px)";
 
 
-    setTimeout(function () {
+        setTimeout(function () {
 
-        btnNo.style.transform =
-            "translateX(0)";
+            btnNo.style.transform =
+                "translateX(-8px)";
 
-    }, 200);
+        }, 100);
 
-});
+
+        setTimeout(function () {
+
+            btnNo.style.transform =
+                "translateX(0)";
+
+        }, 200);
+
+    }
+);
 
 
 // ==================================================
@@ -141,9 +210,11 @@ function comprobarRespuesta() {
         mensajeAcertijo.textContent =
             "Primero tienes que intentar responder 👀";
 
+
         respuesta.focus();
 
         return;
+
     }
 
 
@@ -161,6 +232,7 @@ function comprobarRespuesta() {
 
 
         return;
+
     }
 
 
@@ -168,7 +240,9 @@ function comprobarRespuesta() {
         "Mmm... piensa en esa palabra que elegiste para describirte 💭";
 
 
-    respuesta.value = "";
+    respuesta.value =
+        "";
+
 
     respuesta.focus();
 
@@ -209,26 +283,33 @@ const opciones1 =
     );
 
 
-opciones1.forEach(function (opcion) {
+opciones1.forEach(
+    function (opcion) {
 
-    opcion.addEventListener(
-        "click",
-        function () {
+        opcion.addEventListener(
+            "click",
+            function () {
 
-            mensajePregunta1.textContent =
-                "Mmm... interesante elección 💭";
+                mensajePregunta1.textContent =
+                    "Mmm... interesante elección 💭";
 
 
-            setTimeout(function () {
+                setTimeout(
+                    function () {
 
-                mostrarPantalla(revelacion1);
+                        mostrarPantalla(
+                            revelacion1
+                        );
 
-            }, 1000);
+                    },
+                    1000
+                );
 
-        }
-    );
+            }
+        );
 
-});
+    }
+);
 
 
 // ==================================================
@@ -239,7 +320,9 @@ btnPregunta2.addEventListener(
     "click",
     function () {
 
-        mostrarPantalla(pregunta2);
+        mostrarPantalla(
+            pregunta2
+        );
 
     }
 );
@@ -255,61 +338,173 @@ const opciones2 =
     );
 
 
-opciones2.forEach(function (opcion) {
+opciones2.forEach(
+    function (opcion) {
 
-    opcion.addEventListener(
-        "click",
-        function () {
+        opcion.addEventListener(
+            "click",
+            function () {
 
-            const esCorrecta =
-                opcion.getAttribute(
-                    "data-correcta"
-                ) === "si";
+                const esCorrecta =
+                    opcion.getAttribute(
+                        "data-correcta"
+                    ) === "si";
 
 
-            // --------------------------------------
-            // RESPUESTA INCORRECTA
-            // --------------------------------------
+                // ----------------------------------
+                // RESPUESTA INCORRECTA
+                // ----------------------------------
 
-            if (!esCorrecta) {
+                if (!esCorrecta) {
+
+                    mensajePregunta2.textContent =
+                        "Mmm... no exactamente 😌";
+
+                    return;
+
+                }
+
+
+                // ----------------------------------
+                // RESPUESTA CORRECTA
+                // ----------------------------------
 
                 mensajePregunta2.textContent =
-                    "Mmm... no exactamente 😌";
+                    "Creo que por fin llegaste a la correcta... 💛";
 
-                return;
+
+                setTimeout(
+                    function () {
+
+                        mostrarPantalla(
+                            revelacion2
+                        );
+
+                    },
+                    1000
+                );
 
             }
+        );
 
-
-            // --------------------------------------
-            // RESPUESTA CORRECTA
-            // --------------------------------------
-
-            mensajePregunta2.textContent =
-                "Creo que por fin llegaste a la correcta... 💛";
-
-
-            setTimeout(function () {
-
-                mostrarPantalla(revelacion2);
-
-            }, 1000);
-
-        }
-    );
-
-});
+    }
+);
 
 
 // ==================================================
-// PASAR A LA CARTA
+// PASAR AL SOBRE
 // ==================================================
 
 btnCarta.addEventListener(
     "click",
     function () {
 
+        // Reiniciamos el sobre por si se vuelve
+        // a abrir la página durante pruebas
+
+        sobre.classList.remove(
+            "abierto"
+        );
+
+
+        papelCarta.classList.remove(
+            "mostrar-carta"
+        );
+
+
+        papelCarta.style.display =
+            "none";
+
+
+        sobreContenedor.style.display =
+            "flex";
+
+
+        textoAbrir.style.display =
+            "block";
+
+
         mostrarPantalla(carta);
+
+    }
+);
+
+
+// ==================================================
+// ABRIR LA CARTA
+// ==================================================
+
+btnAbrirCarta.addEventListener(
+    "click",
+    function () {
+
+        // Evitamos múltiples clics
+
+        if (
+            sobre.classList.contains(
+                "abierto"
+            )
+        ) {
+
+            return;
+
+        }
+
+
+        // Abrimos el sobre
+
+        sobre.classList.add(
+            "abierto"
+        );
+
+
+        textoAbrir.textContent =
+            "Abriendo tu carta... 💛";
+
+
+        // ------------------------------------------
+        // Después de la animación mostramos
+        // la carta completa
+        // ------------------------------------------
+
+        setTimeout(
+            function () {
+
+                sobreContenedor.style.opacity =
+                    "0";
+
+
+                sobreContenedor.style.transform =
+                    "scale(0.95)";
+
+
+                sobreContenedor.style.transition =
+                    "opacity 0.6s ease, transform 0.6s ease";
+
+
+            },
+            1500
+        );
+
+
+        setTimeout(
+            function () {
+
+                sobreContenedor.style.display =
+                    "none";
+
+
+                papelCarta.style.display =
+                    "block";
+
+
+                papelCarta.classList.add(
+                    "mostrar-carta"
+                );
+
+            },
+            2100
+        );
 
     }
 );
