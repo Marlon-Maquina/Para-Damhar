@@ -8,9 +8,16 @@
     box-sizing: border-box;
 }
 
+
 body {
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     overflow: hidden;
+
 }
 
 
@@ -19,16 +26,19 @@ body {
 ================================================== */
 
 .pantalla {
+
     min-height: 100vh;
     width: 100%;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
     position: relative;
 
     background:
+
         radial-gradient(
             circle at 20% 20%,
             #fff9c9 0%,
@@ -48,6 +58,7 @@ body {
         );
 
     padding: 20px;
+
 }
 
 
@@ -57,20 +68,26 @@ body {
 
 .tarjeta {
 
-    width: min(90%, 550px);
+    width:
+        min(90%, 550px);
 
-    max-height: 90vh;
+    max-height:
+        90vh;
 
-    overflow-y: auto;
+    overflow-y:
+        auto;
 
     background:
         rgba(255, 255, 255, 0.88);
 
-    padding: 45px 40px;
+    padding:
+        45px 40px;
 
-    border-radius: 25px;
+    border-radius:
+        25px;
 
-    text-align: center;
+    text-align:
+        center;
 
     box-shadow:
         0 20px 60px
@@ -80,10 +97,12 @@ body {
         1px solid
         rgba(255, 210, 70, 0.35);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(10px);
 
     animation:
         aparecer 0.8s ease;
+
 }
 
 
@@ -95,7 +114,10 @@ body {
 .pantalla-pregunta,
 .revelacion,
 .carta-contenedor {
-    display: none;
+
+    display:
+        none;
+
 }
 
 
@@ -105,53 +127,72 @@ body {
 
 .emoji {
 
-    font-size: 45px;
+    font-size:
+        45px;
 
-    margin-bottom: 20px;
+    margin-bottom:
+        20px;
 
     animation:
         latido 2s infinite;
+
 }
 
 
 .pequeno {
 
-    color: #9a8121;
+    color:
+        #9a8121;
 
-    font-size: 16px;
+    font-size:
+        16px;
 
-    margin-bottom: 12px;
+    margin-bottom:
+        12px;
+
 }
 
 
 h1 {
 
-    color: #5d4c08;
+    color:
+        #5d4c08;
 
     font-size:
         clamp(28px, 5vw, 40px);
 
-    margin-bottom: 25px;
+    margin-bottom:
+        25px;
+
 }
 
 
 .pregunta {
 
-    color: #5f5a43;
+    color:
+        #5f5a43;
 
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
 
-    font-size: 17px;
+    font-size:
+        17px;
 
-    line-height: 1.7;
+    line-height:
+        1.7;
 
-    margin-bottom: 30px;
+    margin-bottom:
+        30px;
+
 }
 
 
 .pregunta strong {
 
-    color: #c59b00;
+    color:
+        #c59b00;
+
 }
 
 
@@ -161,19 +202,27 @@ h1 {
 
 .pista {
 
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
 
-    color: #8c7413;
+    color:
+        #8c7413;
 
-    font-size: 15px;
+    font-size:
+        15px;
 
-    margin-bottom: 25px;
+    margin-bottom:
+        25px;
+
 }
 
 
 .pista strong {
 
-    color: #c59b00;
+    color:
+        #c59b00;
+
 }
 
 
@@ -183,32 +232,42 @@ h1 {
 
 .botones {
 
-    display: flex;
+    display:
+        flex;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    gap: 15px;
+    gap:
+        15px;
 
-    flex-wrap: wrap;
+    flex-wrap:
+        wrap;
+
 }
 
 
 .btn {
 
-    border: none;
+    border:
+        none;
 
     padding:
         14px 25px;
 
-    border-radius: 30px;
+    border-radius:
+        30px;
 
-    font-size: 16px;
+    font-size:
+        16px;
 
-    cursor: pointer;
+    cursor:
+        pointer;
 
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
+
 }
 
 
@@ -216,6 +275,7 @@ h1 {
 
     transform:
         translateY(-3px);
+
 }
 
 
@@ -225,13 +285,16 @@ h1 {
 
 .btn-si {
 
-    background: #f4c928;
+    background:
+        #f4c928;
 
-    color: #4c3c00;
+    color:
+        #4c3c00;
 
     box-shadow:
         0 8px 20px
         rgba(220, 174, 0, 0.25);
+
 }
 
 
@@ -240,6 +303,7 @@ h1 {
     box-shadow:
         0 12px 25px
         rgba(220, 174, 0, 0.35);
+
 }
 
 
@@ -249,9 +313,12 @@ h1 {
 
 .btn-no {
 
-    background: #f2f2f2;
+    background:
+        #f2f2f2;
 
-    color: #555;
+    color:
+        #555;
+
 }
 
 
@@ -261,21 +328,28 @@ h1 {
 
 .entrada {
 
-    display: flex;
+    display:
+        flex;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 12px;
+    gap:
+        12px;
 
-    flex-wrap: wrap;
+    flex-wrap:
+        wrap;
+
 }
 
 
 .entrada input {
 
-    width: 150px;
+    width:
+        150px;
 
     padding:
         14px 15px;
@@ -284,40 +358,51 @@ h1 {
         2px solid
         #ead477;
 
-    border-radius: 15px;
+    border-radius:
+        15px;
 
-    outline: none;
+    outline:
+        none;
 
-    text-align: center;
+    text-align:
+        center;
 
-    font-size: 24px;
+    font-size:
+        24px;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    letter-spacing: 8px;
+    letter-spacing:
+        8px;
 
-    color: #5d4c08;
+    color:
+        #5d4c08;
 
-    background: #fffdf4;
+    background:
+        #fffdf4;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
     transition:
         border-color 0.25s ease,
         box-shadow 0.25s ease;
+
 }
 
 
 .entrada input:focus {
 
-    border-color: #d8b321;
+    border-color:
+        #d8b321;
 
     box-shadow:
         0 0 0 4px
         rgba(244, 201, 40, 0.15);
+
 }
 
 
@@ -327,24 +412,31 @@ h1 {
 
 .opciones {
 
-    display: flex;
+    display:
+        flex;
 
-    flex-direction: column;
+    flex-direction:
+        column;
 
-    gap: 12px;
+    gap:
+        12px;
 
-    margin-top: 10px;
+    margin-top:
+        10px;
+
 }
 
 
 .opcion {
 
-    width: 100%;
+    width:
+        100%;
 
     padding:
         15px 18px;
 
-    border-radius: 15px;
+    border-radius:
+        15px;
 
     border:
         2px solid
@@ -353,19 +445,25 @@ h1 {
     background:
         #fffdf4;
 
-    color: #5f5a43;
+    color:
+        #5f5a43;
 
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
 
-    font-size: 16px;
+    font-size:
+        16px;
 
-    cursor: pointer;
+    cursor:
+        pointer;
 
     transition:
         transform 0.25s ease,
         background 0.25s ease,
         border-color 0.25s ease,
         box-shadow 0.25s ease;
+
 }
 
 
@@ -383,6 +481,7 @@ h1 {
     box-shadow:
         0 5px 15px
         rgba(200, 165, 30, 0.15);
+
 }
 
 
@@ -397,7 +496,9 @@ h1 {
     color:
         #806a0d;
 
-    margin-top: 5px;
+    margin-top:
+        5px;
+
 }
 
 
@@ -407,19 +508,25 @@ h1 {
 
 .mensaje {
 
-    margin-top: 20px;
+    margin-top:
+        20px;
 
-    min-height: 24px;
+    min-height:
+        24px;
 
     font-family:
-        Arial, sans-serif;
+        Arial,
+        sans-serif;
 
     color:
         #9b7d00;
 
-    font-size: 14px;
+    font-size:
+        14px;
 
-    line-height: 1.6;
+    line-height:
+        1.6;
+
 }
 
 
@@ -430,20 +537,26 @@ h1 {
 .texto-revelacion {
 
     font-family:
-        Arial, sans-serif;
+        Arial,
+        sans-serif;
 
     color:
         #6e6544;
 
-    font-size: 16px;
+    font-size:
+        16px;
 
-    line-height: 1.7;
+    line-height:
+        1.7;
+
 }
 
 
 .texto-revelacion p {
 
-    margin-bottom: 15px;
+    margin-bottom:
+        15px;
+
 }
 
 
@@ -452,10 +565,12 @@ h1 {
     color:
         #8b7000;
 
-    font-size: 18px;
+    font-size:
+        18px;
 
     margin-top:
         25px !important;
+
 }
 
 
@@ -464,7 +579,9 @@ h1 {
     color:
         #c59b00;
 
-    font-size: 22px;
+    font-size:
+        22px;
+
 }
 
 
@@ -474,163 +591,636 @@ h1 {
 
 .corazon {
 
-    position: absolute;
+    position:
+        absolute;
 
     color:
         rgba(212, 172, 28, 0.35);
 
-    font-size: 40px;
+    font-size:
+        40px;
 
     animation:
         flotar 5s ease-in-out infinite;
 
-    pointer-events: none;
+    pointer-events:
+        none;
+
 }
 
 
 .corazon-1 {
 
-    top: 12%;
-    left: 10%;
+    top:
+        12%;
+
+    left:
+        10%;
+
 }
 
 
 .corazon-2 {
 
-    top: 20%;
-    right: 12%;
+    top:
+        20%;
 
-    font-size: 28px;
+    right:
+        12%;
 
-    animation-delay: 1s;
+    font-size:
+        28px;
+
+    animation-delay:
+        1s;
+
 }
 
 
 .corazon-3 {
 
-    bottom: 15%;
-    left: 15%;
+    bottom:
+        15%;
 
-    font-size: 25px;
+    left:
+        15%;
 
-    animation-delay: 2s;
+    font-size:
+        25px;
+
+    animation-delay:
+        2s;
+
 }
 
 
 .corazon-4 {
 
-    bottom: 10%;
-    right: 10%;
+    bottom:
+        10%;
 
-    font-size: 45px;
+    right:
+        10%;
 
-    animation-delay: 3s;
+    font-size:
+        45px;
+
+    animation-delay:
+        3s;
+
 }
 
 
 .flor {
 
-    position: absolute;
+    position:
+        absolute;
 
-    font-size: 35px;
+    font-size:
+        35px;
 
-    opacity: 0.7;
+    opacity:
+        0.7;
 
     animation:
         florFlotar 6s ease-in-out infinite;
 
-    pointer-events: none;
+    pointer-events:
+        none;
+
 }
 
 
 .flor-1 {
 
-    top: 10%;
-    left: 7%;
+    top:
+        10%;
+
+    left:
+        7%;
+
 }
 
 
 .flor-2 {
 
-    top: 15%;
-    right: 8%;
+    top:
+        15%;
 
-    font-size: 28px;
+    right:
+        8%;
 
-    animation-delay: 1s;
+    font-size:
+        28px;
+
+    animation-delay:
+        1s;
+
 }
 
 
 .flor-3 {
 
-    bottom: 12%;
-    left: 8%;
+    bottom:
+        12%;
 
-    font-size: 30px;
+    left:
+        8%;
 
-    animation-delay: 2s;
+    font-size:
+        30px;
+
+    animation-delay:
+        2s;
+
 }
 
 
 .flor-4 {
 
-    bottom: 15%;
-    right: 7%;
+    bottom:
+        15%;
 
-    font-size: 40px;
+    right:
+        7%;
 
-    animation-delay: 3s;
+    font-size:
+        40px;
+
+    animation-delay:
+        3s;
+
 }
 
 
 .flor-5 {
 
-    top: 45%;
-    left: 3%;
+    top:
+        45%;
 
-    font-size: 22px;
+    left:
+        3%;
 
-    animation-delay: 4s;
+    font-size:
+        22px;
+
+    animation-delay:
+        4s;
+
 }
 
 
 /* ==================================================
-   CARTA
+   CONTENEDOR DE CARTA
 ================================================== */
 
 .carta-contenedor {
 
-    position: relative;
+    position:
+        relative;
 
-    width: 100%;
+    width:
+        100%;
 
-    height: 100vh;
+    height:
+        100vh;
 
-    align-items: center;
+    display:
+        none;
 
-    justify-content: center;
+    align-items:
+        center;
 
-    padding: 30px;
+    justify-content:
+        center;
 
-    animation:
-        aparecerCarta 1.2s ease;
+    padding:
+        30px;
+
 }
 
 
 /* ==================================================
-   PAPEL
+   SOBRE - CONTENEDOR
+================================================== */
+
+.sobre-contenedor {
+
+    position:
+        relative;
+
+    z-index:
+        20;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    animation:
+        aparecerSobre 1s ease;
+
+}
+
+
+/* ==================================================
+   SOBRE
+================================================== */
+
+.sobre {
+
+    position:
+        relative;
+
+    width:
+        480px;
+
+    height:
+        300px;
+
+    perspective:
+        1000px;
+
+    filter:
+        drop-shadow(
+            0 20px 30px
+            rgba(130, 100, 20, 0.22)
+        );
+
+}
+
+
+/* ==================================================
+   BASE DEL SOBRE
+================================================== */
+
+.sobre-base {
+
+    position:
+        absolute;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff8d9,
+            #f8e9a9
+        );
+
+    border:
+        1px solid
+        #e0c85e;
+
+    border-radius:
+        5px;
+
+    overflow:
+        hidden;
+
+}
+
+
+/* ==================================================
+   DECORACIÓN INTERIOR DEL SOBRE
+================================================== */
+
+.sobre-base::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        70%;
+
+    height:
+        140%;
+
+    left:
+        -15%;
+
+    top:
+        -20%;
+
+    background:
+        rgba(255,255,255,0.18);
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+/* ==================================================
+   TEXTO DEL SOBRE
+================================================== */
+
+.sobre-texto {
+
+    position:
+        absolute;
+
+    bottom:
+        25px;
+
+    width:
+        100%;
+
+    text-align:
+        center;
+
+    color:
+        #a58a29;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size:
+        23px;
+
+}
+
+
+/* ==================================================
+   PAPEL DENTRO DEL SOBRE
+================================================== */
+
+.papel-sobre {
+
+    position:
+        absolute;
+
+    width:
+        88%;
+
+    height:
+        90%;
+
+    left:
+        6%;
+
+    bottom:
+        4%;
+
+    background:
+        #fffdf3;
+
+    border:
+        1px solid
+        #eadb9c;
+
+    z-index:
+        2;
+
+    transition:
+        transform 1.3s ease;
+
+}
+
+
+/* ==================================================
+   MINI CORAZÓN
+================================================== */
+
+.mini-corazon {
+
+    position:
+        absolute;
+
+    top:
+        30px;
+
+    width:
+        100%;
+
+    text-align:
+        center;
+
+    font-size:
+        30px;
+
+}
+
+
+/* ==================================================
+   SOLAPA DEL SOBRE
+================================================== */
+
+.solapa {
+
+    position:
+        absolute;
+
+    z-index:
+        5;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        0;
+
+    height:
+        0;
+
+    border-left:
+        240px solid transparent;
+
+    border-right:
+        240px solid transparent;
+
+    border-top:
+        160px solid #f2d66c;
+
+    transform-origin:
+        top center;
+
+    transition:
+        transform 1s ease;
+
+    filter:
+        drop-shadow(
+            0 3px 3px
+            rgba(130, 100, 20, 0.12)
+        );
+
+}
+
+
+/* ==================================================
+   SELLO
+================================================== */
+
+.sello {
+
+    position:
+        absolute;
+
+    z-index:
+        10;
+
+    left:
+        50%;
+
+    top:
+        128px;
+
+    transform:
+        translate(-50%, -50%);
+
+    width:
+        62px;
+
+    height:
+        62px;
+
+    border-radius:
+        50%;
+
+    border:
+        4px solid
+        #e2b82e;
+
+    background:
+        #f7cf38;
+
+    color:
+        #fff9d7;
+
+    font-size:
+        28px;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 7px 15px
+        rgba(170, 130, 10, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.sello:hover {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+
+    box-shadow:
+        0 10px 20px
+        rgba(170, 130, 10, 0.35);
+
+}
+
+
+/* ==================================================
+   TEXTO "ABRIR"
+================================================== */
+
+.texto-abrir {
+
+    margin-top:
+        25px;
+
+    color:
+        #8d761d;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        15px;
+
+    animation:
+        parpadeoSuave 2s infinite;
+
+}
+
+
+/* ==================================================
+   ANIMACIÓN DE APERTURA
+================================================== */
+
+.sobre.abierto .solapa {
+
+    transform:
+        rotateX(180deg);
+
+}
+
+
+.sobre.abierto .papel-sobre {
+
+    transform:
+        translateY(-135px);
+
+}
+
+
+.sobre.abierto .sello {
+
+    opacity:
+        0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.4);
+
+    pointer-events:
+        none;
+
+}
+
+
+.sobre.abierto {
+
+    animation:
+        sobreAbierto 1.8s ease;
+
+}
+
+
+/* ==================================================
+   PAPEL DE LA CARTA
 ================================================== */
 
 .papel {
 
-    position: relative;
+    position:
+        relative;
 
     width:
         min(90%, 720px);
 
-    max-height: 88vh;
+    max-height:
+        88vh;
 
-    overflow-y: auto;
+    overflow-y:
+        auto;
 
     padding:
         55px 65px;
@@ -638,7 +1228,8 @@ h1 {
     background:
         #fffdf3;
 
-    border-radius: 4px;
+    border-radius:
+        4px;
 
     box-shadow:
         0 20px 50px
@@ -653,22 +1244,51 @@ h1 {
 
     transform:
         rotate(-0.5deg);
+
+    display:
+        none;
+
+    opacity:
+        0;
+
 }
 
 
-/* Textura del papel */
+/* ==================================================
+   ANIMACIÓN DE APARICIÓN DE LA CARTA
+================================================== */
+
+.papel.mostrar-carta {
+
+    display:
+        block;
+
+    animation:
+        aparecerCarta 1.4s ease forwards;
+
+}
+
+
+/* ==================================================
+   TEXTURA DEL PAPEL
+================================================== */
 
 .papel::before {
 
-    content: "";
+    content:
+        "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    inset: 0;
+    inset:
+        0;
 
-    pointer-events: none;
+    pointer-events:
+        none;
 
-    opacity: 0.25;
+    opacity:
+        0.25;
 
     background-image:
         radial-gradient(
@@ -676,7 +1296,9 @@ h1 {
             transparent 1px
         );
 
-    background-size: 8px 8px;
+    background-size:
+        8px 8px;
+
 }
 
 
@@ -686,32 +1308,41 @@ h1 {
 
 .decoracion-papel {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 2;
+    z-index:
+        2;
 
     color:
         #d5ad22;
 
-    font-size: 25px;
+    font-size:
+        25px;
 
-    text-align: center;
+    text-align:
+        center;
 
-    margin-bottom: 12px;
+    margin-bottom:
+        12px;
+
 }
 
 
 /* ==================================================
-   ENCABEZADO DE CARTA
+   ENCABEZADO
 ================================================== */
 
 .carta-saludo {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 2;
+    z-index:
+        2;
 
-    text-align: center;
+    text-align:
+        center;
 
     color:
         #a08732;
@@ -721,19 +1352,25 @@ h1 {
         "Segoe Script",
         cursive;
 
-    font-size: 24px;
+    font-size:
+        24px;
 
-    margin-bottom: 8px;
+    margin-bottom:
+        8px;
+
 }
 
 
 .titulo-carta {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 2;
+    z-index:
+        2;
 
-    text-align: center;
+    text-align:
+        center;
 
     color:
         #62500d;
@@ -746,25 +1383,32 @@ h1 {
     font-size:
         clamp(28px, 5vw, 40px);
 
-    margin-bottom: 15px;
+    margin-bottom:
+        15px;
+
 }
 
 
 .linea-carta {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 2;
+    z-index:
+        2;
 
-    width: 80px;
+    width:
+        80px;
 
-    height: 2px;
+    height:
+        2px;
 
     margin:
         0 auto 30px;
 
     background:
         #d6b52e;
+
 }
 
 
@@ -774,9 +1418,11 @@ h1 {
 
 .texto-carta {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 2;
+    z-index:
+        2;
 
     color:
         #5f5945;
@@ -786,17 +1432,23 @@ h1 {
         "Times New Roman",
         serif;
 
-    font-size: 17px;
+    font-size:
+        17px;
 
-    line-height: 1.8;
+    line-height:
+        1.8;
 
-    text-align: left;
+    text-align:
+        left;
+
 }
 
 
 .texto-carta p {
 
-    margin-bottom: 20px;
+    margin-bottom:
+        20px;
+
 }
 
 
@@ -804,6 +1456,51 @@ h1 {
 
     color:
         #b28b00;
+
+}
+
+
+/* ==================================================
+   NUEVA FRASE SOBRE SU APARIENCIA
+================================================== */
+
+.frase-apariencia {
+
+    position:
+        relative;
+
+    padding:
+        15px 22px;
+
+    margin:
+        28px 0 !important;
+
+    text-align:
+        center;
+
+    font-style:
+        italic;
+
+    color:
+        #806b24;
+
+    background:
+        rgba(250, 221, 102, 0.16);
+
+    border-left:
+        3px solid
+        #d6b52e;
+
+    border-right:
+        3px solid
+        #d6b52e;
+
+    border-radius:
+        10px;
+
+    animation:
+        aparecerFrase 1.2s ease;
+
 }
 
 
@@ -813,30 +1510,38 @@ h1 {
 
 .frase-carta {
 
-    text-align: center;
+    text-align:
+        center;
 
-    font-style: italic;
+    font-style:
+        italic;
 
     color:
         #75652a;
 
     padding:
         0 20px;
+
 }
 
 
 .frase-final-carta {
 
-    text-align: center;
+    text-align:
+        center;
 
-    font-size: 21px;
+    font-size:
+        21px;
 
     color:
         #a17e00;
 
-    font-weight: bold;
+    font-weight:
+        bold;
 
-    margin-top: 30px;
+    margin-top:
+        30px;
+
 }
 
 
@@ -846,13 +1551,17 @@ h1 {
 
 .firma-carta {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 2;
+    z-index:
+        2;
 
-    margin-top: 35px;
+    margin-top:
+        35px;
 
-    text-align: right;
+    text-align:
+        right;
 
     color:
         #76642b;
@@ -862,28 +1571,37 @@ h1 {
         "Segoe Script",
         cursive;
 
-    font-size: 21px;
+    font-size:
+        21px;
+
 }
 
 
 .firma-carta strong {
 
-    display: block;
+    display:
+        block;
 
     color:
         #66530b;
 
-    font-size: 30px;
+    font-size:
+        30px;
 
-    margin-top: 3px;
+    margin-top:
+        3px;
+
 }
 
 
 .corazon-firma {
 
-    margin-top: 5px;
+    margin-top:
+        5px;
 
-    font-size: 22px;
+    font-size:
+        22px;
+
 }
 
 
@@ -893,11 +1611,14 @@ h1 {
 
 .flores-carta {
 
-    position: absolute;
+    position:
+        absolute;
 
-    z-index: 5;
+    z-index:
+        5;
 
-    pointer-events: none;
+    pointer-events:
+        none;
 
     filter:
         drop-shadow(
@@ -907,70 +1628,106 @@ h1 {
 
     animation:
         floresCarta 5s ease-in-out infinite;
+
 }
 
 
 .flor-carta-1 {
 
-    top: 8%;
-    left: 7%;
+    top:
+        8%;
 
-    font-size: 55px;
+    left:
+        7%;
+
+    font-size:
+        55px;
+
 }
 
 
 .flor-carta-2 {
 
-    top: 13%;
-    right: 8%;
+    top:
+        13%;
 
-    font-size: 42px;
+    right:
+        8%;
 
-    animation-delay: 1s;
+    font-size:
+        42px;
+
+    animation-delay:
+        1s;
+
 }
 
 
 .flor-carta-3 {
 
-    bottom: 8%;
-    left: 9%;
+    bottom:
+        8%;
 
-    font-size: 48px;
+    left:
+        9%;
 
-    animation-delay: 2s;
+    font-size:
+        48px;
+
+    animation-delay:
+        2s;
+
 }
 
 
 .flor-carta-4 {
 
-    bottom: 12%;
-    right: 7%;
+    bottom:
+        12%;
 
-    font-size: 58px;
+    right:
+        7%;
 
-    animation-delay: 3s;
+    font-size:
+        58px;
+
+    animation-delay:
+        3s;
+
 }
 
 
 .flor-carta-5 {
 
-    top: 43%;
-    left: 3%;
+    top:
+        43%;
 
-    font-size: 32px;
+    left:
+        3%;
 
-    animation-delay: 1.5s;
+    font-size:
+        32px;
+
+    animation-delay:
+        1.5s;
+
 }
 
 
 .flor-carta-6 {
 
-    top: 48%;
-    right: 3%;
+    top:
+        48%;
 
-    font-size: 30px;
+    right:
+        3%;
 
-    animation-delay: 2.5s;
+    font-size:
+        30px;
+
+    animation-delay:
+        2.5s;
+
 }
 
 
@@ -982,63 +1739,78 @@ h1 {
 
     from {
 
-        opacity: 0;
+        opacity:
+            0;
 
         transform:
             translateY(20px)
             scale(0.98);
+
     }
 
     to {
 
-        opacity: 1;
+        opacity:
+            1;
 
         transform:
             translateY(0)
             scale(1);
+
     }
+
 }
 
 
 @keyframes latido {
 
-    0%, 100% {
+    0%,
+    100% {
 
         transform:
             scale(1);
+
     }
 
     50% {
 
         transform:
             scale(1.12);
+
     }
+
 }
 
 
 @keyframes flotar {
 
-    0%, 100% {
+    0%,
+    100% {
 
         transform:
             translateY(0);
+
     }
 
     50% {
 
         transform:
             translateY(-15px);
+
     }
+
 }
 
 
 @keyframes florFlotar {
 
-    0%, 100% {
+    0%,
+    100% {
 
         transform:
             translateY(0)
             rotate(-5deg);
+
     }
 
     50% {
@@ -1046,7 +1818,62 @@ h1 {
         transform:
             translateY(-12px)
             rotate(5deg);
+
     }
+
+}
+
+
+@keyframes aparecerSobre {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(30px)
+            scale(0.9);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes sobreAbierto {
+
+    0% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.03);
+
+    }
+
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
 }
 
 
@@ -1054,31 +1881,65 @@ h1 {
 
     from {
 
-        opacity: 0;
+        opacity:
+            0;
 
         transform:
-            scale(0.94)
-            translateY(25px);
+            scale(0.92)
+            translateY(35px)
+            rotate(-1deg);
+
     }
 
     to {
 
-        opacity: 1;
+        opacity:
+            1;
 
         transform:
             scale(1)
-            translateY(0);
+            translateY(0)
+            rotate(-0.5deg);
+
     }
+
+}
+
+
+@keyframes aparecerFrase {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
 }
 
 
 @keyframes floresCarta {
 
-    0%, 100% {
+    0%,
+    100% {
 
         transform:
             translateY(0)
             rotate(-4deg);
+
     }
 
     50% {
@@ -1086,7 +1947,29 @@ h1 {
         transform:
             translateY(-12px)
             rotate(4deg);
+
     }
+
+}
+
+
+@keyframes parpadeoSuave {
+
+    0%,
+    100% {
+
+        opacity:
+            0.7;
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+    }
+
 }
 
 
@@ -1096,151 +1979,297 @@ h1 {
 
 @media (max-width: 600px) {
 
+
     .tarjeta {
 
-        width: 92%;
+        width:
+            92%;
 
         padding:
             35px 22px;
 
-        max-height: 88vh;
+        max-height:
+            88vh;
+
     }
 
 
     h1 {
 
-        font-size: 29px;
+        font-size:
+            29px;
+
     }
 
 
     .pregunta {
 
-        font-size: 16px;
+        font-size:
+            16px;
+
     }
 
 
     .btn {
 
-        width: 100%;
+        width:
+            100%;
 
-        max-width: 280px;
+        max-width:
+            280px;
+
     }
 
 
     .entrada {
 
-        flex-direction: column;
+        flex-direction:
+            column;
+
     }
 
 
     .entrada input {
 
-        width: 180px;
+        width:
+            180px;
+
     }
 
 
     .opcion {
 
-        font-size: 15px;
+        font-size:
+            15px;
 
         padding:
             14px 12px;
+
     }
 
 
     .corazon {
 
-        font-size: 30px;
+        font-size:
+            30px;
+
     }
 
 
     .flor {
 
-        font-size: 27px;
+        font-size:
+            27px;
+
     }
 
 
-    /* Carta */
+    /* ==============================================
+       SOBRE EN CELULAR
+    ============================================== */
+
+    .sobre {
+
+        width:
+            330px;
+
+        height:
+            220px;
+
+    }
+
+
+    .solapa {
+
+        border-left-width:
+            165px;
+
+        border-right-width:
+            165px;
+
+        border-top-width:
+            120px;
+
+    }
+
+
+    .sello {
+
+        width:
+            55px;
+
+        height:
+            55px;
+
+        top:
+            100px;
+
+        font-size:
+            24px;
+
+    }
+
+
+    .sobre-texto {
+
+        bottom:
+            18px;
+
+        font-size:
+            18px;
+
+    }
+
+
+    .papel-sobre {
+
+        width:
+            88%;
+
+        height:
+            88%;
+
+    }
+
+
+    .sobre.abierto .papel-sobre {
+
+        transform:
+            translateY(-100px);
+
+    }
+
+
+    .texto-abrir {
+
+        font-size:
+            13px;
+
+    }
+
+
+    /* ==============================================
+       CARTA
+    ============================================== */
 
     .carta-contenedor {
 
-        padding: 15px;
+        padding:
+            15px;
+
     }
 
 
     .papel {
 
-        width: 94%;
+        width:
+            94%;
 
-        max-height: 92vh;
+        max-height:
+            92vh;
 
         padding:
             40px 25px;
+
     }
 
 
     .texto-carta {
 
-        font-size: 16px;
+        font-size:
+            16px;
 
-        line-height: 1.7;
+        line-height:
+            1.7;
+
     }
 
 
     .carta-saludo {
 
-        font-size: 21px;
+        font-size:
+            21px;
+
     }
 
 
     .titulo-carta {
 
-        font-size: 29px;
+        font-size:
+            29px;
+
+    }
+
+
+    .frase-apariencia {
+
+        padding:
+            13px 15px;
+
+        font-size:
+            15px;
+
     }
 
 
     .frase-final-carta {
 
-        font-size: 19px;
+        font-size:
+            19px;
+
     }
 
 
     .flor-carta-1 {
 
-        font-size: 35px;
+        font-size:
+            35px;
 
-        left: 2%;
+        left:
+            2%;
+
     }
 
 
     .flor-carta-2 {
 
-        font-size: 30px;
+        font-size:
+            30px;
 
-        right: 2%;
+        right:
+            2%;
+
     }
 
 
     .flor-carta-3 {
 
-        font-size: 32px;
+        font-size:
+            32px;
 
-        left: 2%;
+        left:
+            2%;
+
     }
 
 
     .flor-carta-4 {
 
-        font-size: 38px;
+        font-size:
+            38px;
 
-        right: 2%;
+        right:
+            2%;
+
     }
 
 
     .flor-carta-5,
     .flor-carta-6 {
 
-        display: none;
+        display:
+            none;
+
     }
 
 }
